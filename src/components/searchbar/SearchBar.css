@@ -1,0 +1,22 @@
+.clear {
+    border-bottom: 1px solid #58a9a7;
+    color: #58a9a7; 
+    cursor: pointer;
+}
+
+.searchtag {
+    color: #58a9a7;
+}
+
+.searchskill {
+    padding: 0px;
+    margin: 0px;
+    padding: 7px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    color: #58a9a7;
+    font-weight: bold;
+    background-color: #f1f7f5;
+}

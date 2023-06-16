@@ -1,0 +1,70 @@
+img {
+    width: 80px;
+}
+
+.company {
+    padding: 0px;
+    margin: 0px;
+    font-size: 15px;
+    color: #58a9a7;
+}
+
+.job {
+    padding: 0px;
+    margin: 0px;
+    font-size: 18px;
+    color: #323838;
+}
+
+.job:hover {
+    color: #58a9a7;
+    transition: color 0.3s;
+}
+
+.jobdetails {
+    padding: 0px;
+    margin: 0px;
+    font-size: 15px;
+    color: #939c9b;
+    font-weight: 600;
+}
+
+.post, .featured {
+    padding: 0px;
+    margin: 0px;
+    padding: 5px 10px;
+    font-size: 11px;
+    color: white;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.post {
+    background-color: #58a9a7;
+}
+
+.featured {
+    background-color: black;
+}
+
+.skill {
+    padding: 0px;
+    margin: 0px;
+    padding: 7px;
+    border-radius: 4px;
+    color: #58a9a7;
+    font-weight: bold;
+    background-color: #f1f7f5;
+    cursor: pointer;
+}
+
+.skill:hover {
+    color: white;
+    background-color: darkgreen;
+    transition: color 0.3s;
+    transition: background-color 0.3s;
+}
+
+.bullet {
+    margin: 0px 9px;
+}
