@@ -20,11 +20,12 @@ export const SearchBar = ({ searchTags, setSearchTags }) => {
     <>
       <Paper sx={{ minWidth: 275, maxWidth: "80vw", mb: "20px", mx: "auto", mt: "-25px" }}>
         <Box
-          sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", height: "50px" }}
+          sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", minHeight: "50px" }}
           pl={2}
           pr={2}
+          
         >
-          <Box sx={{ display: "flex", gap: "10px" }}>
+          <Box sx={{ display: "flex", gap: "10px", flexWrap:"wrap", flexGrow:"1" }} pt={1} pb={1}>
             {searchTags.map((searchtag, i) => {
               return (
                 <Box
