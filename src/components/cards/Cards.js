@@ -3,13 +3,12 @@ import { CardComponent } from "../card/CardComponent";
 
 export const Cards = ({ cardsData, searchTags, setSearchTags }) => {
   return cardsData.map((cardData) => {
-    console.log(searchTags);
+    // console.log(searchTags);
     // const intersection = cardData.skill.filter(skill => searchTags.includes(skill));
-    let isSubArr = searchTags.every(e => cardData.skill.includes(e));
-
+    let isSubArr = searchTags.every((e) => cardData.skill.includes(e));
 
     // if (searchTags.length === 0 || intersection.length !== 0) {
-      if (searchTags.length === 0 || isSubArr === true) {
+    if (searchTags.length === 0 || isSubArr === true) {
       return (
         <CardComponent
           key={cardData.id}

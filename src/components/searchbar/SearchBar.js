@@ -11,7 +11,7 @@ export const SearchBar = ({ searchTags, setSearchTags }) => {
       })
     );
   }
-  
+
   function removeAllSearchTags() {
     setSearchTags([]);
   }
@@ -27,17 +27,25 @@ export const SearchBar = ({ searchTags, setSearchTags }) => {
           <Box sx={{ display: "flex", gap: "10px" }}>
             {searchTags.map((searchtag, i) => {
               return (
-                <Box key={i} sx={{ display: "flex", alignItems: "center" }}>
+                <Box
+                  key={i}
+                  sx={{ display: "flex", alignItems: "center" }}
+                >
                   <h5 className="searchskill">{searchtag}</h5>
                   <CloseIcon
                     onClick={() => removeSearchTag(searchtag)}
-                    sx={{ color: "white", backgroundColor: "#58a9a7", height: "100%", borderTopRightRadius: "5px", borderBottomRightRadius: "5px", ":hover": { cursor: "pointer", backgroundColor: "darkgreen"}, transition: "background-color 0.3s" }}
+                    sx={{ color: "white", backgroundColor: "#58a9a7", height: "100%", borderTopRightRadius: "5px", borderBottomRightRadius: "5px", ":hover": { cursor: "pointer", backgroundColor: "darkgreen" }, transition: "background-color 0.3s" }}
                   />
                 </Box>
               );
             })}
           </Box>
-          <h5 onClick={() => removeAllSearchTags()} className="clear">Clear</h5>
+          <h5
+            onClick={() => removeAllSearchTags()}
+            className="clear"
+          >
+            Clear
+          </h5>
         </Box>
       </Paper>
     </>

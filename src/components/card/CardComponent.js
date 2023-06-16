@@ -2,7 +2,7 @@ import React from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import "./CardComponent.css";
 
 export const CardComponent = ({ cardData, searchTags, setSearchTags }) => {
@@ -12,13 +12,18 @@ export const CardComponent = ({ cardData, searchTags, setSearchTags }) => {
     }
   }
 
+  const matches = useMediaQuery("(min-width:800px)");
+
   return (
     <Card sx={{ minWidth: 275, maxWidth: "80vw", mb: "20px", mx: "auto", borderLeft: "4px solid #58a9a7" }}>
       <CardContent sx={{ ml: "5px" }}>
-        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexDirection: matches === true ? "row" : "column" }}>
           <Box sx={{ display: "flex ", gap: "20px" }}>
             <Box>
-              <img alt={cardData.company} src={require("../../images/" + cardData.img + ".svg")} />
+              <img
+                alt={cardData.company}
+                src={require("../../images/" + cardData.img + ".svg")}
+              />
             </Box>
 
             <Box
@@ -37,7 +42,7 @@ export const CardComponent = ({ cardData, searchTags, setSearchTags }) => {
             </Box>
           </Box>
           <CardActions>
-            <Box sx={{ display: "flex", gap: "10px" }}>
+            <Box sx={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
               {cardData.skill.map((skill, i) => {
                 return (
                   <h5
